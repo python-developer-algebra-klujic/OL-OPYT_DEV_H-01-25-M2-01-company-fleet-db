@@ -21,7 +21,18 @@ id_counter = 1
 
 while True:
     os.system('cls')
+    STARS = 80
+
     print()
+    print('*'*STARS)
+    print()
+    print('\tPython Company\' fleet database')
+    print()
+    print('*'*STARS)
+    print()
+    print(f'Unos podataka o vozilu {id_counter}.')
+    print()
+
     # TODO Ispisite sve tipove vozila tako da ispred svakog navedete redni broj
     #   Trazite korisnika da selektira jedan broj i tako izabere tip vozila
     vehicle['vehicle_type'] = input('Upisite tip vozila: ')
