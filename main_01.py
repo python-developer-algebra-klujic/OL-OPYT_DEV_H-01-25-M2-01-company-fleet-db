@@ -5,6 +5,8 @@ a podaci koji se čuvaju o svakom vozilu su:
 tip, proizvođač, registarska oznaka, godina prve registracije te cijena u eur.
 '''
 
+# TODO Ako stignemo dio cemo napraviti s funkcijama, a ostatak za DZ, a ako ne onda sve za DZ
+
 import os
 
 
