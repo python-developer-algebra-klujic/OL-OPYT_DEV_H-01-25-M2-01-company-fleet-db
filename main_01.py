@@ -7,10 +7,12 @@ tip, proizvođač, registarska oznaka, godina prve registracije te cijena u eur.
 
 # vehicle_type => car, truck, motorcycle, bicycle, agriculture, marine
 vehicle = {} # prazan set => set(), a prazan rjecnik samo s viticasatim zagradama {}
-vehicle_db = []
+vehicle_db = {}
+id_counter = 1
 
-vehicle_db.append(vehicle) # Dodao sam prazan rjecnik na index 0
-#                               kako bih kasnije mogao dohvatiti prvo vozilo s indeksom 1
+# vehicle_db = []
+# vehicle_db.append(vehicle) # Dodao sam prazan rjecnik na index 0
+# #                               kako bih kasnije mogao dohvatiti prvo vozilo s indeksom 1
 
 while True:
     # TODO Ispisite sve tipove vozila tako da ispred svakog navedete redni broj
@@ -21,11 +23,15 @@ while True:
     vehicle['license_plate'] = input('Upisite registarsku oznaku vozila: ')
     vehicle['purchased_price'] = float(input('Upisite nabavnu cijenu vozila: '))
 
-    vehicle_db.append(vehicle)
+    # vehicle_db.append(vehicle)
+    vehicle_db[id_counter] = vehicle
+    id_counter += 1
 
     next_vehicle = input('Zelite li dodati novo vozilo? (da/ne): ')
     if next_vehicle.lower() != 'da':
         break
 
 
+print(vehicle_db)
+print()
 print(vehicle_db[1])
