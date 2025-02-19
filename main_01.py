@@ -18,6 +18,8 @@ id_counter = 1
 # #                               kako bih kasnije mogao dohvatiti prvo vozilo s indeksom 1
 
 while True:
+    os.system('cls')
+    print()
     # TODO Ispisite sve tipove vozila tako da ispred svakog navedete redni broj
     #   Trazite korisnika da selektira jedan broj i tako izabere tip vozila
     vehicle['vehicle_type'] = input('Upisite tip vozila: ')
@@ -25,6 +27,9 @@ while True:
     vehicle['production_year'] = int(input('Upisite godinu proizvodnje vozila: '))
     vehicle['license_plate'] = input('Upisite registarsku oznaku vozila: ')
     vehicle['purchased_price'] = float(input('Upisite nabavnu cijenu vozila: '))
+
+    # TODO Omogucite korisniku dodavanje svojstva po izboru u rjecnik vehicle
+    #       (Hint: razmislite kako dodati novi kljuc u rjecnik)
 
     # vehicle_db.append(vehicle)
     vehicle_db[id_counter] = vehicle
