@@ -10,6 +10,29 @@ tip, proizvođač, registarska oznaka, godina prve registracije te cijena u eur.
 import os
 
 
+STARS = 80
+
+
+def display_header(menu: str='menu'):
+    os.system('cls')
+    print()
+    print('*'*STARS)
+    print()
+    print('\tPython Company\' fleet database')
+    print()
+    print('*'*STARS)
+
+    if menu == 'menu':
+        print()
+        print(f'Unos podataka o vozilu {id_counter}.')
+        print()
+    elif menu == 'table':
+        print('ID           Tip          Proizvodac      God. proizvodnje   Reg. oznaka      Cijena (EUR)')
+        print('_'*STARS)
+        print()
+
+
+
 # vehicle_type => car, truck, motorcycle, bicycle, agriculture, marine
 vehicle = {} # prazan set => set(), a prazan rjecnik samo s viticasatim zagradama {}
 vehicle_db = {}
@@ -20,18 +43,7 @@ id_counter = 1
 # #                               kako bih kasnije mogao dohvatiti prvo vozilo s indeksom 1
 
 while True:
-    os.system('cls')
-    STARS = 80
-
-    print()
-    print('*'*STARS)
-    print()
-    print('\tPython Company\' fleet database')
-    print()
-    print('*'*STARS)
-    print()
-    print(f'Unos podataka o vozilu {id_counter}.')
-    print()
+    display_header()
 
     # TODO Ispisite sve tipove vozila tako da ispred svakog navedete redni broj
     #   Trazite korisnika da selektira jedan broj i tako izabere tip vozila
@@ -55,22 +67,17 @@ while True:
 
 
 # ISPIS PODATAKA O VOZILIMA
-os.system('cls')
-STARS = 80
+display_header('table')
 
-print()
-print('*'*STARS)
-print()
-print('\tPython Company\' fleet database')
-print()
-print('*'*STARS)
-print()
-print('ID           Tip          Proizvodac      God. proizvodnje   Reg. oznaka      Cijena (EUR)')
-print('_'*STARS)
-print()
+# TODO KReirati funkciju print_database(db_to_print)
+# Funkcija mora ispisati bilo koji rjecnik koji se preda kao argument
+# ZA ONE KOJI ZELE ZNATI VISE Imate modul koji ispisuje rjecnik u tablicnom formatu.
+#   Potrazite na internetu
+
 # Ispis pojedinacnog reda
 for id, vehicle in vehicle_db.items():
     print(f'{id}  {vehicle['vehicle_type']}   {vehicle['manufacturer']}   {vehicle['production_year']}   {vehicle['license_plate']}   {vehicle['purchased_price']} EUR')
 
 print()
 print('_'*STARS)
+print()
