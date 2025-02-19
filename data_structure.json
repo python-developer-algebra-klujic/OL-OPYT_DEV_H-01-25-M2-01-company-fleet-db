@@ -1,0 +1,23 @@
+[
+    {
+        "vehicle_type": "car",
+        "manufacturer": "Fiat",
+        "production_year": 2015,
+        "license_plate": "SB 1234 AA",
+        "purchased_price": 10500
+    },
+    {
+        "vehicle_type": "car",
+        "manufacturer": "Renault",
+        "production_year": 2017,
+        "license_plate": "SB 1234 AB",
+        "purchased_price": 11500
+    },
+    {
+        "vehicle_type": "car",
+        "manufacturer": "Seat",
+        "production_year": 2013,
+        "license_plate": "SB 1234 AC",
+        "purchased_price": 9500
+    }
+]
