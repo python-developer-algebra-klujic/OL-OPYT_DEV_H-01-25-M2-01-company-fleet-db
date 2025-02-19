@@ -5,6 +5,9 @@ a podaci koji se čuvaju o svakom vozilu su:
 tip, proizvođač, registarska oznaka, godina prve registracije te cijena u eur.
 '''
 
+import os
+
+
 # vehicle_type => car, truck, motorcycle, bicycle, agriculture, marine
 vehicle = {} # prazan set => set(), a prazan rjecnik samo s viticasatim zagradama {}
 vehicle_db = {}
@@ -32,6 +35,24 @@ while True:
         break
 
 
-print(vehicle_db)
+
+# ISPIS PODATAKA O VOZILIMA
+os.system('cls')
+STARS = 80
+
 print()
-print(vehicle_db[1])
+print('*'*STARS)
+print()
+print('\tPython Company\' fleet database')
+print()
+print('*'*STARS)
+print()
+print('ID           Tip          Proizvodac      God. proizvodnje   Reg. oznaka      Cijena (EUR)')
+print('_'*STARS)
+print()
+# Ispis pojedinacnog reda
+for id, vehicle in vehicle_db.items():
+    print(f'{id}  {vehicle['vehicle_type']}   {vehicle['manufacturer']}   {vehicle['production_year']}   {vehicle['license_plate']}   {vehicle['purchased_price']} EUR')
+
+print()
+print('_'*STARS)
